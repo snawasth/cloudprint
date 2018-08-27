@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
-import UploadScreen from './UploadScreen'
+import UploadScreen from './UploadScreen';
+
 
 class Login extends Component {
 constructor(props){
@@ -17,10 +20,10 @@ constructor(props){
 render() {
     return (
       <div>
-        <MuiThemeProvider>
+        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
           <div>
           <AppBar
-             title="Login"
+             title="LOGIN"
            />
            <TextField
              hintText="Enter your Username"
