@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -20,25 +18,29 @@ class Register extends Component {
   render() {
     return (
       <div>
-        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+        <MuiThemeProvider>
           <div>
           <AppBar
-             title="REGISTER"
+             title="REGISTER" 
+             style={{ backgroundColor: '#342c5c' }}
            />
            <TextField
              hintText="Enter your First Name"
+             errorText="This field is required"
              floatingLabelText="First Name"
              onChange = {(event,newValue) => this.setState({first_name:newValue})}
              />
            <br/>
            <TextField
              hintText="Enter your Last Name"
+             errorText="This field is required"
              floatingLabelText="Last Name"
              onChange = {(event,newValue) => this.setState({last_name:newValue})}
              />
            <br/>
            <TextField
              hintText="Enter your Email"
+             errorText="This field is required"
              type="email"
              floatingLabelText="Email"
              onChange = {(event,newValue) => this.setState({email:newValue})}
@@ -46,12 +48,16 @@ class Register extends Component {
            <br/>
            <TextField
              type = "password"
+             errorText="This field is required"
              hintText="Enter your Password"
              floatingLabelText="Password"
              onChange = {(event,newValue) => this.setState({password:newValue})}
              />
            <br/>
-           <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+           <RaisedButton label="Submit" 
+           backgroundColor= '#342c5c'
+           labelColor= '#fff'
+           onClick={(event) => this.handleClick(event)}/>
           </div>
          </MuiThemeProvider>
       </div>

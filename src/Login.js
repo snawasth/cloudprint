@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
@@ -20,25 +19,33 @@ constructor(props){
 render() {
     return (
       <div>
-        <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+        <MuiThemeProvider>
           <div>
           <AppBar
-             title="LOGIN"
+             title="LOGIN" style={{ backgroundColor: '#342c5c' }} 
            />
            <TextField
              hintText="Enter your Username"
+             errorText="Username is required"
+             floatingLabelFocusStyle={style.floatingLabelFocusStyle}
+             underlineFocusStyle={style.underlineStyle}
              floatingLabelText="Username"
              onChange = {(event,newValue) => this.setState({username:newValue})}
+             
              />
            <br/>
              <TextField
                type="password"
+               errorText="Password is required"
                hintText="Enter your Password"
                floatingLabelText="Password"
                onChange = {(event,newValue) => this.setState({password:newValue})}
                />
              <br/>
-             <RaisedButton label="Submit" secondary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+             <RaisedButton label="Submit"
+             backgroundColor= '#342c5c'
+             labelColor= '#fff'
+             onClick={(event) => this.handleClick(event)}/>
          </div>
          </MuiThemeProvider>
       </div>
@@ -79,5 +86,12 @@ render() {
 }
 const style = {
  margin: 15,
+ floatingLabelFocusStyle: {
+  color: '#B39DDB',
+},
+underlineStyle: {
+  borderColor: '#B39DDB',
+},
+
 };
 export default Login;

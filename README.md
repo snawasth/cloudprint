@@ -1,3 +1,11 @@
+
+- https://medium.com/technoetics/how-to-create-in-browser-terminal-using-react-and-nodejs-e923b5f9d28f
+
+- https://medium.com/technoetics/create-a-developer-portfolio-using-reactjs-d34ea1bfb18e
+
+- https://v0.material-ui.com/#/components/text-field
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
