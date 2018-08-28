@@ -35,6 +35,7 @@ class Loginscreen extends Component {
                <RaisedButton label={this.state.buttonLabel} 
                backgroundColor= '#342c5c'
                labelColor= '#fff'
+               style={style}
                onClick={(event) => this.handleClick(event)}/>
            </div>
           </MuiThemeProvider>

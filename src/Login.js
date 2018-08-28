@@ -43,6 +43,7 @@ render() {
                />
              <br/>
              <RaisedButton label="Submit"
+             style={style}
              backgroundColor= '#342c5c'
              labelColor= '#fff'
              onClick={(event) => this.handleClick(event)}/>

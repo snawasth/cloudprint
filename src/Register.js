@@ -57,6 +57,7 @@ class Register extends Component {
            <RaisedButton label="Submit" 
            backgroundColor= '#342c5c'
            labelColor= '#fff'
+           style={style}
            onClick={(event) => this.handleClick(event)}/>
           </div>
          </MuiThemeProvider>
