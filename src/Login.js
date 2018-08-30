@@ -26,24 +26,25 @@ render() {
            />
            <TextField
              hintText="Enter your Username"
-             errorText="Username is required"
              floatingLabelFocusStyle={style.floatingLabelFocusStyle}
              underlineFocusStyle={style.underlineStyle}
              floatingLabelText="Username"
              onChange = {(event,newValue) => this.setState({username:newValue})}
-             
              />
            <br/>
              <TextField
                type="password"
-               errorText="Password is required"
-               hintText="Enter your Password"
+               floatingLabelFocusStyle={style.floatingLabelFocusStyle}
+               underlineFocusStyle={style.underlineStyle}
+               hintText="Enter the Password"
                floatingLabelText="Password"
                onChange = {(event,newValue) => this.setState({password:newValue})}
                />
              <br/>
              <RaisedButton label="Submit"
              style={style}
+             
+             buttonStyle={{ borderRadius: 25 }}
              backgroundColor= '#342c5c'
              labelColor= '#fff'
              onClick={(event) => this.handleClick(event)}/>
@@ -88,11 +89,13 @@ render() {
 const style = {
  margin: 15,
  floatingLabelFocusStyle: {
-  color: '#B39DDB',
+  color: '#272d50',
 },
 underlineStyle: {
-  borderColor: '#B39DDB',
+  borderColor: '##272d50',
 },
+borderRadius: 25,
+
 
 };
 export default Login;

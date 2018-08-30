@@ -18,7 +18,7 @@ class Loginscreen extends Component {
   componentWillMount(){
     var loginscreen=[];
     loginscreen.push(<Login parentContext={this} appContext={this.props.parentContext}/>);
-    var loginmessage = "Not registered yet? Register Now";
+    var loginmessage = "Not registered yet? Register Now.";
     this.setState({
                   loginscreen:loginscreen,
                   loginmessage:loginmessage
@@ -36,6 +36,7 @@ class Loginscreen extends Component {
                backgroundColor= '#342c5c'
                labelColor= '#fff'
                style={style}
+               buttonStyle={{ borderRadius: 25 }}
                onClick={(event) => this.handleClick(event)}/>
            </div>
           </MuiThemeProvider>
@@ -50,22 +51,24 @@ class Loginscreen extends Component {
     if(this.state.isLogin){
       var loginscreen=[];
       loginscreen.push(<Register parentContext={this}/>);
-      loginmessage = "Already registered? Go to Login";
+      loginmessage = "Already registered? Go to Login.";
       this.setState({
                      loginscreen:loginscreen,
                      loginmessage:loginmessage,
                      buttonLabel:"Login",
+                     borderRadius: 25,
                      isLogin:false
                    })
     }
     else{
       var loginscreen=[];
       loginscreen.push(<Login parentContext={this}/>);
-      loginmessage = "Not Registered yet? Go to registration";
+      loginmessage = "Not Registered yet? Go to registration.";
       this.setState({
                      loginscreen:loginscreen,
                      loginmessage:loginmessage,
                      buttonLabel:"Register",
+                     borderRadius: 25,
                      isLogin:true
                    })
     }
@@ -73,5 +76,6 @@ class Loginscreen extends Component {
 }
 const style = {
   margin: 15,
+  borderRadius: 25,
 };
 export default Loginscreen;

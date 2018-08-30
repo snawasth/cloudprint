@@ -26,21 +26,24 @@ class Register extends Component {
            />
            <TextField
              hintText="Enter your First Name"
-             errorText="This field is required"
+             floatingLabelFocusStyle={style.floatingLabelFocusStyle}
+             underlineFocusStyle={style.underlineStyle}
              floatingLabelText="First Name"
              onChange = {(event,newValue) => this.setState({first_name:newValue})}
              />
            <br/>
            <TextField
              hintText="Enter your Last Name"
-             errorText="This field is required"
+             floatingLabelFocusStyle={style.floatingLabelFocusStyle}
+             underlineFocusStyle={style.underlineStyle}
              floatingLabelText="Last Name"
              onChange = {(event,newValue) => this.setState({last_name:newValue})}
              />
            <br/>
            <TextField
-             hintText="Enter your Email"
-             errorText="This field is required"
+             hintText="Enter your Email ID"
+             floatingLabelFocusStyle={style.floatingLabelFocusStyle}
+             underlineFocusStyle={style.underlineStyle}
              type="email"
              floatingLabelText="Email"
              onChange = {(event,newValue) => this.setState({email:newValue})}
@@ -48,8 +51,9 @@ class Register extends Component {
            <br/>
            <TextField
              type = "password"
-             errorText="This field is required"
-             hintText="Enter your Password"
+             floatingLabelFocusStyle={style.floatingLabelFocusStyle}
+             underlineFocusStyle={style.underlineStyle}
+             hintText="Enter the Password"
              floatingLabelText="Password"
              onChange = {(event,newValue) => this.setState({password:newValue})}
              />
@@ -58,6 +62,7 @@ class Register extends Component {
            backgroundColor= '#342c5c'
            labelColor= '#fff'
            style={style}
+           buttonStyle={{ borderRadius: 25 }}
            onClick={(event) => this.handleClick(event)}/>
           </div>
          </MuiThemeProvider>
@@ -99,5 +104,14 @@ class Register extends Component {
 
 const style = {
   margin: 15,
+  floatingLabelFocusStyle: {
+    color: '#272d50',
+  },
+  underlineStyle: {
+    borderColor: '#272d50',
+  },
+  borderRadius: 25,
 };
 export default Register;
+
+// errorText="This field is required"
