@@ -14,20 +14,20 @@ class App extends Component {
       uploadScreen:[]
     }
   }
-  componentWillMount(){
-    var loginPage =[];
-    loginPage.push(<Loginscreen parentContext={this}/>);
-    this.setState({
-                  loginPage:loginPage
-                    })
+  // componentWillMount(){
+  //   var loginPage =[];
+  //   loginPage.push(<Loginscreen parentContext={this}/>);
+  //   this.setState({
+  //                 loginPage:loginPage
+  //                   })
 
-                    // if(response.data.code == 200){
-                    //   console.log("Login successfull");
-                    //   var uploadScreen=[];
-                    //   uploadScreen.push(<UploadScreen appContext={self.props.appContext}/>)
-                    //   self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
-                    //   }
-  }
+  //                   if(response.data.code == 200){
+  //                     console.log("Login successfull");
+  //                     var uploadScreen=[];
+  //                     uploadScreen.push(<UploadScreen appContext={self.props.appContext}/>)
+  //                     self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
+  //                     }
+  // }
   render() {
     return (
       <div className="App">
