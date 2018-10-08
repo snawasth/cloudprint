@@ -5,6 +5,7 @@
 
 - https://v0.material-ui.com/#/components/text-field
 
+- https://www.color-hex.com/color-palette/65195
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
