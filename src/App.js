@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import './App.css';
+import logo from './logo.svg';
 import Loginscreen from './Loginscreen';
 import UploadScreen from './UploadScreen'
 
@@ -35,6 +36,7 @@ class App extends Component {
       <div className="App">
         {this.state.loginPage}
         {this.state.uploadScreen}
+		 <img src={logo} className="App-logo" alt="logo" />
       </div>
     );
   }
