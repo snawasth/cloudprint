@@ -6,8 +6,12 @@
     </g>
 </svg> -->
 
-<svg xmlns="http://www.w3.org/2000/svg" >
-  <circle cx="150" cy="50" r="40" stroke="black" stroke-width="3" fill="#342c5c" /> 
+<svg xmlns="http://www.w3.org/2000/svg" width="500px" height="500px">
+ <circle cx="250" cy="50" r="50" fill="#342c5c"/>
+<!-- <polyline points="250,250,250,220" style="fill:none;stroke:black;stroke-width:3"/> -->
+  <polyline points="120,180,180,180,180,180" style="fill:none;stroke:black;stroke-width:3" />
+  <circle cx="235" cy="30" r="5" fill="#fff"/>
+  <circle cx="265" cy="30" r="5" fill="#fff"/>
 </svg> 
 
 <!-- <svg xmlns="http://www.w3.org/2000/svg" >
